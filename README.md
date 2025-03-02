@@ -79,6 +79,8 @@ Al guardar los datos (con una foto o documento) de forma exitosa:
 <div align="center">
     <img src="/docs/capturas/consultas.jpeg" alt="Consultas">
 </div>
+
+Resultado de consulta:
 <div align="center">
     <img src="/docs/capturas/consultas_2.jpeg" alt="Consultas">
 </div>
@@ -204,4 +206,3 @@ El servidor maneja las siguientes rutas:
 ## Licencia
 
 Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENSE` para más detalles.
-```
