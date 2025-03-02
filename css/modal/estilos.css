@@ -1,0 +1,279 @@
+
+:root {
+    --white: #FFF;
+    --gray: #F3F3F3;
+    --gray-mid: #9D9D9D;
+    --gray-dark: #3e3e3e;
+    --gray-hover: #F7F7F7;
+}
+
+.container {
+	height: 32rem;
+	width: 50rem;
+	padding: 1.25rem;
+	margin: 0.675rem;
+	border-radius: 1rem;
+    background-color: var(--white);
+	box-shadow: 
+        rgba(100, 100, 111, 0.2)
+        0px 7px 29px 0px;	
+}
+
+.tabs-content {
+    position: relative;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content--active {
+    display: block;
+}
+
+.tabs {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    border-bottom: 1px solid #F0F0F0;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabs > a {
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--gray-mid);
+    text-align: left;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tabs > a img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.tabs > .active {
+    font-weight: 700;
+    outline: none;
+    color: var(--gray-dark);
+    margin-bottom: -1px;
+    border-bottom: 1px solid var(--gray-dark);
+}
+
+.tabs > a > svg {
+    stroke: var(--gray-mid);
+}
+
+.tabs > .active > svg {
+    stroke: var(--gray-dark);
+}
+
+/* inspired by https://dribbble.com/shots/17399694-Search-Results-Animation */
+
+
+/* Estilo para el contenedor de tabs */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1em;
+}
+
+.tabs a {
+    text-decoration: none;
+    color: #9D9D9D;
+    padding: 0.5em 1em;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.tabs a.active {
+    border-bottom: 2px solid #000;
+    color: #000;
+}
+
+/* Estilo para el contenido de los tabs */
+.tab-content-wrapper {
+    padding: 1em;
+    background: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content--active {
+    display: block;
+}
+
+/* Estilo para el formulario de archivos */
+.dropzone-box {
+    border: 2px dashed #ccc;
+    padding: 2em;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.dropzone-area {
+    position: relative;
+    padding: 2em;
+    border: 2px dashed #aaa;
+    border-radius: 5px;
+    background: #fff;
+    margin-top: 1em;
+}
+
+.dropzone-area input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.dropzone-actions {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropzone-actions button {
+    padding: 0.5em 1em;
+    border: none;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dropzone-actions button:hover {
+    background: #444;
+}
+
+/* Estilo para el video y la imagen de la fotografía */
+#contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-space-around {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1em;
+}
+
+video,
+canvas {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#foto-contenedor img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 1em;
+}
+
+
+
+/*  
+MANEJO DEL VIDEO Y FOTOGRAFIA
+*/
+
+.flex-space-around,
+.flex-space-around-column {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flex-space-around {
+    flex-direction: row;
+    margin: 1rem 1rem 0 1rem;
+}
+
+.flex-space-around-column {
+    flex-direction: column;
+}
+
+#video,
+#canvas {
+    min-width: 320px;
+    max-width: 320px;
+    min-height: 240px;
+    border-radius: 10px;
+    border: var(--botones-borde-normal);
+}
+
+#foto-contenedor {
+    display: flex;
+    overflow: hidden;
+    max-width: 320px;
+    min-height: 240px;
+    max-height: 240px;
+    border-radius: 10px;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+}
+
+#foto-contenedor img {
+    width: 100%;
+    max-width: 100%;
+}
+
+@supports(object-fit: cover) {
+    #foto-contenedor img {
+        height: 100%;
+        object-fit: cover;
+        /* contain | cover | fill | none | scale-down */
+        object-position: center center;
+    }
+}
+
+.camara {
+    min-width: 80px;
+}
+
+#iconoFoto,
+#iconoCambiar {
+    display: flex;
+    cursor: pointer;
+    /* font-size: 4rem; */
+    align-items: center;
+    justify-content: center;
+}
+
+#iconoFoto:hover,
+#iconoCambiar:hover {
+    color: var(--colorOficial);
+    background-color: rgb(51, 51, 51, 0.3);
+    transition: 0.5s;
+    border-radius: 1rem;
+}
+
+#foto {
+    cursor: pointer;
+}
+
+.camara {
+    min-width: 80px;
+}

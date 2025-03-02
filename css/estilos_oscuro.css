@@ -1,0 +1,681 @@
+html {
+    box-sizing: border-box;
+    /* font-size: 62.5%; */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1c1c1c;
+    /* font-size: 1.6rem; */
+    /* line-height: 2; */
+}
+
+/* a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+} */
+
+/* HEADER */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    height: auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* CONTENEDOR */
+.contenedor {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* BARRA DE ELEMENTOS DEL HEADER */
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* BARRA DE NAVEGACION  */
+nav {
+    /* background-color: #444; */
+    color: #fff;
+    padding: 3px;
+    /* text-align: center; */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: auto;
+    padding: 10px 5px 10px 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #555;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .nav-user {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+#nombreUsuario {
+    text-transform: uppercase;
+}
+
+button, input[type="button"] {
+    background-color: #555;
+    margin: auto 0;
+    height: 30px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover, input[type="button"]:hover {
+    background-color: #444;
+    color: #ddd;
+}
+
+button:disabled, input[type="button"]:disabled {
+    background-color: gray;
+}
+
+/* CONTENIDO */
+.contenido-principal {
+    background-color: #2c2c2c;
+    color: #ddd;
+    margin: 50px auto 50px auto;
+    padding: 0 30px 30px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.usuarios-barra,
+.altas-barra,
+.consultas-barra,
+.cambios-barra {
+    display: flex;
+    justify-content: space-between;
+}
+
+.busqueda-barra {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+input[type=search] {
+    float: right;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+    background-color: #555;
+    color: #fff;
+    width: 100%;
+}
+
+/* TABLA */
+/* Estilos generales para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0 30px 0;
+    border-radius: 5px;
+    overflow: hidden;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Estilos para los encabezados de la tabla */
+thead th {
+    background-color: #555;
+    color: white;
+    text-align: left;
+    padding: 8px;
+}
+
+/* Estilos para las celdas de la tabla */
+tbody td {
+    border: 1px solid #444;
+    padding: 8px;
+    color: #ddd;
+}
+
+/* Estilos para las filas de la tabla al pasar el mouse */
+tbody tr:hover {
+    background-color: #444;
+}
+
+@media only screen and (max-width: 1000px) {
+    table,
+    thead,
+    tbody,
+    tr,
+    th,
+    td,
+    caption {
+        display: block;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    table {
+        border: none;
+    }
+
+    table thead tr {
+        display: none;
+    }
+
+    table tbody tr {
+        margin: 1em 0;
+        border: 1px solid #555;
+    }
+
+    table td {
+        border: none;
+        border-bottom: 1px solid #555;
+        position: relative;
+        padding-left: 45%;
+        text-align: left;
+    }
+
+    table tr td:last-child {
+        border-bottom: 1px double #555;
+    }
+
+    table tr:last-child td:last-child {
+        border: none;
+    }
+
+    table td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #ddd;
+    }
+
+    td:nth-of-type(1):before {
+        content: "Nombre";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Nacimiento";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Edad";
+    }
+
+    td:nth-of-type(4):before {
+        content: "Género";
+    }
+
+    td:nth-of-type(5):before {
+        content: "Login";
+    }
+
+    td:nth-of-type(6):before {
+        content: "Creación";
+    }
+
+    td:nth-of-type(7):before {
+        content: "Acceso";
+    }
+
+    td:nth-of-type(8):before {
+        content: "Acciones";
+    }
+}
+
+.acciones {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.botonEditar {
+    background-color: green;
+}
+
+.botonEliminar {
+    background-color: red;
+}
+
+/* RESUMEN DATOS TABLA */
+#resumenTabla {
+    display: block;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    #resumenTabla {
+        background-color: #2c2c2c;
+        color: #ddd;
+        padding: 10px;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/* PAGINACION Y CONTADOR */
+.paginacion {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#contador {
+    text-align: center;
+    margin-top: 10px;
+    margin: 0 15px 0 15px;
+    color: #ddd;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(180deg, rgba(60,60,60,1) 0%, rgba(90,90,90,1) 50%, rgba(110,110,110,1) 100%);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+footer span {
+    font-style: italic;
+}
+
+/* UTILIDADES */
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+}
+
+.oculto {
+    display: none;
+}
+
+.logo {
+    color: white;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.logo__icono img {
+    width: 30px;
+}
+
+.logo__nombre {
+    font-weight: 400;
+}
+
+.logo__nombre span {
+    font-weight: 700;
+}
+
+.contenedor-boton {
+    padding-top: 20px;
+    justify-content: space-between;
+}
+
+/* Formulario */
+
+#formulario {
+    background-color: #444;
+    width: min(100rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#formulario fieldset {
+    border: none;
+}
+
+#formulario legend {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #FFC107;
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        column-gap: 1rem;
+    }
+}
+
+.campo {
+    margin-bottom: 2rem;
+}
+
+.campo label {
+    display: block;
+    font-weight: 700;
+    color: white;
+}
+
+.campo input, .campo select {
+    width: 100%;
+    margin-top: .5rem;
+    padding: .5rem;
+    border: none;
+}
+
+#resetear {
+    background-color: red;
+    padding: 1rem;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    width: 100%;
+    margin-top: 2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+#resetear:hover {
+    background-color: darkred;
+    color: white;
+}
+
+#registrar {
+    background-color: green;
+    padding: 1rem;
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    width: 100%;
+    margin-top: 2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+#registrar:hover {
+    background-color: darkgreen;
+    color: white;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-contenido {
+    background-color: #2c2c2c;
+    color: #ddd;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+	max-width: 50rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dropzone {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #ddd;
+}
+
+.dropzone p {
+    margin: 0;
+}
+
+.preview {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    display: none;
+}
+
+/* NUEVOS ESTILOS PARA EL NAVBAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    animation: slideInFromTop 1s ease-in-out;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .menu {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .menu a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.perfil {
+    color: white;
+}
+
+.navbar .menu a:hover, .perfil:hover {
+    background-color: #575757;
+    border-radius: 10px;
+}
+
+.navbar .perfil {
+    position: relative;
+}
+
+.navbar .perfil img {
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.desplegable {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.navbar .perfil .desplegable {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #2c2c2c;
+    color: #ddd;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.navbar .perfil .desplegable a {
+    color: #ddd;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .perfil .desplegable a:hover {
+    background-color: #555;
+    border-radius: 10px;
+}
+
+.navbar .perfil:hover .desplegable {
+    display: block;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .navbar .menu {
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .navbar .menu a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px solid #444;
+    }
+
+    .navbar .menu a:first-child {
+        border-top: none;
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar .menu-toggle div {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+    }
+
+    .perfil {
+        display: none;
+    }
+}
+
+/* Nuevas */
+.contenido-perfil {
+    display: flex;
+}
+
+.contenido-perfil p {
+    margin: auto 10px auto 10px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
