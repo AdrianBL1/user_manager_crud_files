@@ -160,7 +160,7 @@ master/
 
 1. Clona el repositorio:
     ```sh
-    git clone https://github.com/tu_usuario/user_manager_crud_files.git
+    git clone https://github.com/AdrianBL1/user_manager_crud_files.git
     ```
 
 2. Navega al directorio del proyecto:
